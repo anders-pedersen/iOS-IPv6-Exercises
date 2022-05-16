@@ -53,7 +53,7 @@ class LinkLocalViewController: UIViewController {
                 triggerAlert(gms: games, scr: score)
             }
             isAddressIdPressed = true
-            nextLabel.setTitleColor(UIColor.black, for: UIControlState.normal)
+            nextLabel.setTitleColor(UIColor.black, for: UIControl.State.normal)
         }
     }
     
@@ -77,12 +77,12 @@ class LinkLocalViewController: UIViewController {
     // Game mechanics
     
     func llGenSet() {
-        nextLabel.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
+        nextLabel.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         isAddressIdPressed = false
         for i in 0 ... 3 { setButtonColor(buttonNumber: i, correct: 2) }
         linkLocalTuple.generate()
         for i in 0 ... 3 {
-            buttonArray[i].setTitle(linkLocalTuple.ll[i].string(), for: UIControlState.normal)
+            buttonArray[i].setTitle(linkLocalTuple.ll[i].string(), for: UIControl.State.normal)
         }
         
         // debug

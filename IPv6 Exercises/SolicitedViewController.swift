@@ -51,7 +51,7 @@ class SolicitedViewController: UIViewController {
                 triggerAlert(gms: games, scr: score)
             }
             isPrefixPressed = true
-            nextLabel.setTitleColor(UIColor.black, for: UIControlState.normal)
+            nextLabel.setTitleColor(UIColor.black, for: UIControl.State.normal)
         }
     }
     
@@ -73,14 +73,14 @@ class SolicitedViewController: UIViewController {
     // Game mechanics
     
     func snGenSet() {
-        nextLabel.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
+        nextLabel.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         isPrefixPressed = false
         for i in 0 ... 3 { setButtonColor(buttonNumber: i, correct: 2) }
         solicitedTuple.generate()
         ipAddressValueLabel.text = solicitedTuple.ipv6Address.string()
         for i in 0 ... 3 {
             let title = solicitedTuple.address[i].string()
-            buttonArray[i].setTitle(title, for: UIControlState.normal)
+            buttonArray[i].setTitle(title, for: UIControl.State.normal)
         }
 
         // debug

@@ -31,14 +31,14 @@ func binToInt(_ stringValue: String) -> Int {
 
 func int8ToHex(_ intValue: Int) -> String {
     var hexValue = String(intValue, radix: 16)
-    if hexValue.characters.count == 1 { hexValue = "0" + hexValue }
+    if hexValue.count == 1 { hexValue = "0" + hexValue }
     return hexValue
 }
 
 func bit7Unset(_ intValue: Int) -> Int {
     var returnValue = intValue
     let binValue = String(intValue, radix: 2)
-    if binValue.characters.count >= 2 {
+    if binValue.count >= 2 {
         let index = binValue.index(binValue.endIndex, offsetBy:-2)
         if binValue[index] == "1" { returnValue = intValue - 2 }
     }
@@ -48,7 +48,7 @@ func bit7Unset(_ intValue: Int) -> Int {
 func bit7Set(_ intValue: Int) -> Int {
     var returnValue = intValue
     let binValue = String(intValue, radix: 2)
-    if binValue.characters.count >= 2 {
+    if binValue.count >= 2 {
         let index = binValue.index(binValue.endIndex, offsetBy:-2)
         if binValue[index] == "0" { returnValue = intValue + 2 }
     } else {
@@ -60,7 +60,7 @@ func bit7Set(_ intValue: Int) -> Int {
 func bit6Set(_ intValue: Int) -> Int {
     var returnValue = intValue
     let binValue = String(intValue, radix: 2)
-    if binValue.characters.count >= 3 {
+    if binValue.count >= 3 {
         let index = binValue.index(binValue.endIndex, offsetBy:-3)
         if binValue[index] == "0" { returnValue = intValue + 4 }
     }

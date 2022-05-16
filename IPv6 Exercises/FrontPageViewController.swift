@@ -43,7 +43,7 @@ class FrontPageViewController: UIViewController {
         calcLabel.titleLabel?.font = UIFont.systemFont(ofSize: myFontSize)
         aboutLabel.titleLabel?.font = UIFont.systemFont(ofSize: myFontSize)
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: myFontSize, weight: UIFontWeightBold), NSForegroundColorAttributeName: UIColor.black]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: myFontSize, weight: UIFont.Weight.bold), NSAttributedString.Key.foregroundColor: UIColor.black]
     }
     
 }

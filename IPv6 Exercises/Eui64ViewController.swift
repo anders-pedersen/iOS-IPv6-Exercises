@@ -53,7 +53,7 @@ class Eui64ViewController: UIViewController {
                 triggerAlert(gms: games, scr: score)
             }
             isIfIdPressed = true
-            nextLabel.setTitleColor(UIColor.black, for: UIControlState.normal)
+            nextLabel.setTitleColor(UIColor.black, for: UIControl.State.normal)
         }
     }
 
@@ -76,13 +76,13 @@ class Eui64ViewController: UIViewController {
     // Game mechanics
     
     func mGenSet() {
-        nextLabel.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
+        nextLabel.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         isIfIdPressed = false
         for i in 0 ... 3 { setButtonColor(buttonNumber: i, correct: 2) }
         eui64Tuple.generate()
         macAddressLabel.text = "MAC Address: \(eui64Tuple.mac.string())"
         for i in 0 ... 3 {
-            buttonArray[i].setTitle(eui64Tuple.eui64[i].ifIdString(), for: UIControlState.normal)
+            buttonArray[i].setTitle(eui64Tuple.eui64[i].ifIdString(), for: UIControl.State.normal)
         }
         
         // debug
