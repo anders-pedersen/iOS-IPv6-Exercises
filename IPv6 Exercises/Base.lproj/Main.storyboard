@@ -279,25 +279,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgr-kf-J9Q">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-Xr-u51">
                                 <rect key="frame" x="4" y="48" width="312" height="516"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Mgr-kf-J9Q" firstAttribute="top" secondItem="EOu-7Y-de5" secondAttribute="bottom" constant="4" id="6cX-Bk-egb"/>
-                            <constraint firstItem="9Md-Qw-qcb" firstAttribute="top" secondItem="Mgr-kf-J9Q" secondAttribute="bottom" constant="4" id="Tlb-On-2CC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mgr-kf-J9Q" secondAttribute="trailing" constant="-12" id="rqy-Si-F3z"/>
-                            <constraint firstItem="Mgr-kf-J9Q" firstAttribute="leading" secondItem="Mh4-0G-l6a" secondAttribute="leadingMargin" constant="-12" id="wkI-Ss-Xps"/>
+                            <constraint firstItem="iDD-Xr-u51" firstAttribute="leading" secondItem="Mh4-0G-l6a" secondAttribute="leading" constant="4" id="4qk-MI-J4H"/>
+                            <constraint firstAttribute="trailing" secondItem="iDD-Xr-u51" secondAttribute="trailing" constant="4" id="HMd-Qa-ho7"/>
+                            <constraint firstItem="9Md-Qw-qcb" firstAttribute="top" secondItem="iDD-Xr-u51" secondAttribute="bottom" constant="4" id="nTL-iU-YHl"/>
+                            <constraint firstItem="iDD-Xr-u51" firstAttribute="top" secondItem="EOu-7Y-de5" secondAttribute="bottom" constant="4" id="pri-pf-xBN"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="juj-0t-0uU" appends="YES" id="GdI-TS-QWQ"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="Mgr-kf-J9Q" id="0KB-i1-COa"/>
+                        <outlet property="webView" destination="iDD-Xr-u51" id="1BJ-zi-m61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drX-jd-Tdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,7 +312,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="124" y="-661"/>
+            <point key="canvasLocation" x="123.75" y="-661.26760563380287"/>
         </scene>
         <!--Eui64 View Controller-->
         <scene sceneID="mBA-XI-V1u">
