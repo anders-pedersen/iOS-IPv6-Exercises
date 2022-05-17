@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import WebKit
 
 class HelpViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let localFilePath = Bundle.main.url(forResource: "quiz", withExtension: "html")
         let myRequest = URLRequest(url: localFilePath!)
-        webView.loadRequest(myRequest)
+        webView.load(myRequest)
     }
 
 }
